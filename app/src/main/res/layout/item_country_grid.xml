@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    >
+<RelativeLayout
+    android:id="@+id/my_grid_item"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
     <LinearLayout
-        android:id="@+id/grid_ll"
+        android:id="@+id/item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -43,8 +44,16 @@
         android:layout_width="1dp"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_alignBottom="@+id/grid_ll"
-        android:layout_alignTop="@+id/grid_ll"
+        android:layout_alignBottom="@+id/item"
+        android:layout_alignTop="@+id/item"
+        android:background="@color/cardview_dark_background"/>
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignBottom="@+id/item"
+        android:layout_alignTop="@+id/item"
         android:background="@color/cardview_dark_background"/>
 
 </RelativeLayout>

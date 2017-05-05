@@ -11,8 +11,7 @@ public class Country implements Serializable {
     private String code;
     private String name;
     private boolean isSelected;
-    private int list_flagID;
-    private int grid_flagID;
+    private int flagID;
 
     public Country(String code, String name, boolean isSelected) {
         this.code = code;
@@ -24,21 +23,13 @@ public class Country implements Serializable {
         isSelected = selected;
     }
 
-    public void setList_flagID(int list_flagID) {
-        this.list_flagID = list_flagID;
-    }
-
-    public void setGrid_flagID(int grid_flagID) {
-        this.grid_flagID = grid_flagID;
+    public void setFlagID(int flagID) {
+        this.flagID = flagID;
     }
 
 
-    public int getList_flagID() {
-        return list_flagID;
-    }
-
-    public int getGrid_flagID() {
-        return grid_flagID;
+    public int getFlagID() {
+        return flagID;
     }
 
     public String getCountryCode() {

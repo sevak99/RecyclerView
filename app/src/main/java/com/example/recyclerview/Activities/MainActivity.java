@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.recyclerview.Country;
+import com.example.recyclerview.Grid.GridActivity;
+import com.example.recyclerview.List.ListActivity;
 import com.example.recyclerview.R;
 
 import java.io.BufferedReader;
@@ -37,14 +39,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         countries = new ArrayList<>();
         readFile();
-
-        for(int i = 0; i < countries.size(); i++) {
-            int resourceId = getResources().getIdentifier("flag_" + countries.get(i).getCountryCode(), "drawable", getPackageName());
-            countries.get(i).setGrid_flagID(resourceId);
-            resourceId = getResources().getIdentifier("s_flag_" + countries.get(i).getCountryCode(), "drawable", getPackageName());
-            countries.get(i).setList_flagID(resourceId);
-        }
-
     }
 
     @Override
